@@ -73,8 +73,8 @@ void printValues() {
 
 
   int p = bme.readPressure() / 100.0F;
-  int t = bme.readTemperature();
-  dtostrf(bme.readTemperature(), 5, 1, temp );
+  float t = bme.readTemperature() - 4;
+  dtostrf(t, 5, 1, temp );
   dtostrf(p, 4, 0, pressure);
   dtostrf(bme.readHumidity(), 3, 0, hum);
 
